@@ -101,7 +101,7 @@ const Auth = ({ setAuth }) => {
             <Typography.Text strong style={{ color: ' #7c7c7c' }}>
               Войти с помощью
             </Typography.Text>
-            <Space>
+            <Space wrap align="center">
               <Card hoverable>
                 <img src={reg1} height={40} alt="" />
               </Card>

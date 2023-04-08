@@ -1,5 +1,5 @@
 import { FireOutlined, StarOutlined, ThunderboltOutlined } from '@ant-design/icons';
-import { Avatar, Card, Col, Row, Segmented, Typography } from 'antd';
+import { Avatar, Card, Col, Grid, Row, Segmented, Typography } from 'antd';
 import { ReactComponent as Icon2 } from '../../src/01.svg';
 import { ReactComponent as Icon1 } from '../../src/02.svg';
 import AvatarImg from '../../src/newUser.png';
@@ -11,8 +11,9 @@ import Actions from '../components/Actions';
 import NewPost from '../components/NewPost';
 import Post from '../components/Post';
 import UserCardInfo from '../components/UserCardInfo';
-
+const { useBreakpoint } = Grid;
 const NewUserPage = () => {
+  const screens = useBreakpoint();
   const data = [
     {
       title: 'Приближается срок заключения контракта',
@@ -23,6 +24,7 @@ const NewUserPage = () => {
       text: 'КУ ОО “Центр здравохранения',
     },
   ];
+  console.log(screens);
   return (
     <>
       <Row
@@ -87,7 +89,7 @@ const NewUserPage = () => {
           background: 'inherit',
         }}
         justify="center">
-        <Col span={12}>
+        <Col xs={24} sm={24} md={24} lg={12} xl={12}>
           <Row gutter={[16, 16]}>
             <Col span={24}>
               <UserCardInfo carma="0" dateRegistr="01.04.2023" happy={0} />
@@ -116,7 +118,7 @@ const NewUserPage = () => {
             </Col>
           </Row>
         </Col>
-        <Col span={12}>
+        <Col xs={24} sm={24} md={24} lg={12} xl={12}>
           <Row gutter={[16, 16]}>
             {/* <Col span={24}>
               <NewPost />

@@ -9,7 +9,7 @@ import {
   MessageOutlined,
   SearchOutlined,
 } from '@ant-design/icons';
-import { Avatar, Button, Layout, Menu, Space, theme } from 'antd';
+import { Avatar, Button, Grid, Layout, Menu, Space, theme } from 'antd';
 import React, { useState } from 'react';
 
 import { ReactComponent as YourSvg } from '../src/logo.svg';
@@ -23,13 +23,16 @@ import ViewUserPage from './pages/ViewUserPage';
 import NewUserPage from './pages/NewUserPage';
 import NewViewUserPage from './pages/NewViewUserPage';
 const { Header, Sider, Content } = Layout;
+
 const App = () => {
   const [collapsed, setCollapsed] = useState(true);
   const [auth, setAuth] = useState(false);
   const navigate = useNavigate();
+
   const {
     token: { colorBgContainer },
   } = theme.useToken();
+
   return (
     <>
       {auth ? (
@@ -40,6 +43,7 @@ const App = () => {
           <Sider
             trigger={null}
             collapsible
+            theme="light"
             collapsed={collapsed}
             onClick={() => {
               setCollapsed(!collapsed);

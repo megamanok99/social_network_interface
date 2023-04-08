@@ -103,7 +103,7 @@ const ViewUserPage = () => {
           background: 'inherit',
         }}
         justify="center">
-        <Col span={12}>
+        <Col xs={24} sm={24} md={24} lg={12} xl={12}>
           <Row gutter={[16, 16]}>
             <Col span={24}>
               <UserCardInfo carma="6334" dateRegistr="02.05.2015" happy={45} />
@@ -131,7 +131,7 @@ const ViewUserPage = () => {
             </Col>
           </Row>
         </Col>
-        <Col span={12}>
+        <Col xs={24} sm={24} md={24} lg={12} xl={12}>
           <Row gutter={[16, 16]}>
             <Col span={24}>
               <Card>

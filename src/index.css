@@ -83,3 +83,9 @@ code {
   align-items: center;
   max-width: 100%;
 }
+:where(.css-dev-only-do-not-override-15vhhs2).ant-layout .ant-layout-sider {
+  position: relative;
+  min-width: 0;
+  background: #ffffff !important;
+  transition: all 0.2s;
+}

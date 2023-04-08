@@ -95,7 +95,7 @@ const NewViewUserPage = () => {
           background: 'inherit',
         }}
         justify="center">
-        <Col span={12}>
+        <Col xs={24} sm={24} md={24} lg={12} xl={12}>
           <Row gutter={[16, 16]}>
             <Col span={24}>
               <UserCardInfo carma="0" dateRegistr="01.04.2023" happy={0} />
@@ -123,7 +123,7 @@ const NewViewUserPage = () => {
             </Col> */}
           </Row>
         </Col>
-        <Col span={12}>
+        <Col xs={24} sm={24} md={24} lg={12} xl={12}>
           <Row gutter={[16, 16]}>
             <Col span={24}>
               <Card>
