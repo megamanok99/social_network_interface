@@ -1,13 +1,85 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+:where(.css-dev-only-do-not-override-1vtf12y).ant-layout .ant-layout-sider {
+  position: relative;
+  min-width: 0;
+  background: #ffffff !important;
+  transition: all 0.2s;
+}
+:where(.css-dev-only-do-not-override-15vhhs2).ant-layout .ant-layout-sider {
+  position: relative;
+  min-width: 0;
+  background: #ffffff !important;
+  transition: all 0.2s;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+}
+
+.events {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.events .ant-badge-status {
+  width: 100%;
+  overflow: hidden;
+  font-size: 12px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.notes-month {
+  font-size: 28px;
+  text-align: center;
+}
+.notes-month section {
+  font-size: 28px;
+}
+.ant-segmented-group {
+  justify-content: space-evenly;
+}
+.greenButton {
+  color: #67c91f;
+}
+.tags {
+  position: absolute;
+  right: 0;
+  bottom: 30px;
+}
+.tagEl {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+}
+.segment {
+  width: '100%' !important;
+  justify-content: space-evenly !important;
+  background-color: #ffffff !important;
+}
+:where(.css-dev-only-do-not-override-15vhhs2).ant-segmented .ant-segmented-item-selected {
+  background-color: #ffffff;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 3%), 0 1px 6px -1px rgb(0 0 0 / 2%),
+    0 2px 4px 0 rgb(0 0 0 / 2%);
+  color: rgba(0, 0, 0, 0.88);
+  border-radius: 25px;
+  background-color: #dbe7ff !important;
+}
+.iconCat {
+  color: #0450f2 !important;
+}
+:where(.css-dev-only-do-not-override-15vhhs2).ant-list .ant-list-item .ant-list-item-meta {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  max-width: 100%;
 }
