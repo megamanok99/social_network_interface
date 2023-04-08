@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/social_network_interface/static/css/main.d55a597c.css",
+    "main.js": "/social_network_interface/static/js/main.8625b8db.js",
+    "static/js/787.5b48ff4d.chunk.js": "/social_network_interface/static/js/787.5b48ff4d.chunk.js",
+    "static/media/post.png": "/social_network_interface/static/media/post.41a67bdf982b977b1755.png",
+    "static/media/back.png": "/social_network_interface/static/media/back.2cfaf47b79fb4be8717f.png",
+    "static/media/avatar.png": "/social_network_interface/static/media/avatar.d6772060b8c2b1079d23.png",
+    "static/media/vk.png": "/social_network_interface/static/media/vk.ae4453d3fec7a489673a.png",
+    "static/media/reg2.png": "/social_network_interface/static/media/reg2.15f009c886bd58a91e27.png",
+    "static/media/logo.svg": "/social_network_interface/static/media/logo.492d7b17789e9b391f254060ecb320a4.svg",
+    "static/media/02.svg": "/social_network_interface/static/media/02.f112391665cd79564a8bd7018b893f0a.svg",
+    "static/media/Cert.svg": "/social_network_interface/static/media/Cert.bc7be7ac7750003d188a679d12c4a5d3.svg",
+    "static/media/Vector.svg": "/social_network_interface/static/media/Vector.aa3b6f984edef91cf84aa50b7e1d1c12.svg",
+    "static/media/Cert2.svg": "/social_network_interface/static/media/Cert2.aad271d8f3b7cd491a300c2e3ef59b8a.svg",
+    "static/media/01.svg": "/social_network_interface/static/media/01.d2ae57c321c50310e5a417a7e70acb92.svg",
+    "static/media/arrow-up.svg": "/social_network_interface/static/media/arrow-up.608904a75886a2ee92e3eaff80797ec1.svg",
+    "index.html": "/social_network_interface/index.html",
+    "static/media/calender.svg": "/social_network_interface/static/media/calender.cf1fad1049ed38457c0855a0102ed901.svg",
+    "static/media/karma.svg": "/social_network_interface/static/media/karma.3482205dd9c895232513a45a3520ba59.svg",
+    "main.d55a597c.css.map": "/social_network_interface/static/css/main.d55a597c.css.map",
+    "main.8625b8db.js.map": "/social_network_interface/static/js/main.8625b8db.js.map",
+    "787.5b48ff4d.chunk.js.map": "/social_network_interface/static/js/787.5b48ff4d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d55a597c.css",
+    "static/js/main.8625b8db.js"
+  ]
+}
