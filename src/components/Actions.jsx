@@ -2,7 +2,7 @@ import { Avatar, Card, List, Typography } from 'antd';
 import { CalendarOutlined } from '@ant-design/icons';
 const Actions = ({ data }) => {
   return (
-    <Card>
+    <Card className="actions">
       {' '}
       <Typography.Title level={3}>Мероприятия</Typography.Title>
       <List

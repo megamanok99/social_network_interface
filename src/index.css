@@ -50,6 +50,9 @@ code {
 .ant-segmented-group {
   justify-content: space-evenly;
 }
+.redButton {
+  color: #c91f1f;
+}
 .greenButton {
   color: #67c91f;
 }

@@ -11,7 +11,9 @@ const UserCardInfo = ({ carma, dateRegistr, happy, fail = 0 }) => {
       <Row>
         <Col span={8}>
           <div>
-            <Typography.Text strong>Карма</Typography.Text>
+            <Typography.Text strong className="star-burst">
+              Карма
+            </Typography.Text>
             <Link to={'/karma'}>
               <Info />
             </Link>
@@ -31,7 +33,7 @@ const UserCardInfo = ({ carma, dateRegistr, happy, fail = 0 }) => {
           </Space>
         </Col>
         <Col span={8}>
-          <Typography.Text strong>Успешных сделок</Typography.Text>
+          <Typography.Text strong>Провалов</Typography.Text>
           <br></br>
           <Space>
             <Test style={{ display: 'flex' }} />

@@ -1,4 +1,9 @@
-import { DownCircleOutlined, MessageOutlined, UpCircleOutlined } from '@ant-design/icons';
+import {
+  DownCircleOutlined,
+  MessageOutlined,
+  UpCircleOutlined,
+  LikeOutlined,
+} from '@ant-design/icons';
 import { Avatar, Button, Card, Col, Row, Tag, Typography } from 'antd';
 import PostImg from '../../src/post.png';
 const Post = ({ Img, title, auth, noLike }) => {
@@ -27,10 +32,15 @@ const Post = ({ Img, title, auth, noLike }) => {
               </Typography.Text>
               <Typography.Text style={{ fontSize: 10 }}>дата публикации 07.04.2023</Typography.Text>
             </div>
-            <div>
-              {!noLike && <Button type="link" icon={<DownCircleOutlined />} />}
+            <div className="raining">
+              {!noLike && (
+                <Button type="link" className="redButton" icon={<DownCircleOutlined />} />
+              )}
               134
-              <Button type="link" className="greenButton" icon={<UpCircleOutlined />} />
+              {noLike && <Button disabled type="link" icon={<LikeOutlined />} />}
+              {!noLike && (
+                <Button className="greenButton" type="link" icon={<UpCircleOutlined />} />
+              )}
             </div>
           </div>
         </Col>

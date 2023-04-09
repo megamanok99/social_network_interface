@@ -155,11 +155,11 @@ const NewUserPage = () => {
             </Col>
 
             <Col span={24}>
-              <Post />
+              <Post noLike />
             </Col>
 
             <Col span={24}>
-              <Post />
+              <Post noLike />
             </Col>
           </Row>
         </Col>
