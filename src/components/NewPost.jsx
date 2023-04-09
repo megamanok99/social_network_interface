@@ -11,6 +11,8 @@ import {
   YoutubeOutlined,
 } from '@ant-design/icons';
 import { Button, Card, Dropdown, Input, Menu, Space, Tooltip } from 'antd';
+import postIcon2 from '../../src/postIcon2.png';
+import postIcon1 from '../../src/postIcon1.png';
 const NewPost = () => {
   return (
     <Card>
@@ -66,10 +68,10 @@ const NewPost = () => {
           <Button icon={<AlignLeftOutlined />} />
         </Tooltip>
         <Tooltip title="Download">
-          <Button icon={<AlignCenterOutlined />} />
+          <Button icon={<img src={postIcon2} alt="" />} />
         </Tooltip>
         <Tooltip title="Download">
-          <Button icon={<AlignRightOutlined />} />
+          <Button icon={<img src={postIcon1} alt="" />} />
         </Tooltip>
       </Space.Compact>
 

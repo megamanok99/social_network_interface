@@ -3,7 +3,7 @@ import { Card, Progress, Typography } from 'antd';
 const AchiveBadge = ({ Img, title, descr, percent, needHeader }) => {
   return (
     <>
-      {needHeader && <Typography.Title level={3}>Достижения</Typography.Title>}
+      {needHeader && <Typography.Title level={3}>Следующее достижение</Typography.Title>}
       <div
         style={{
           display: 'flex',
@@ -17,7 +17,7 @@ const AchiveBadge = ({ Img, title, descr, percent, needHeader }) => {
         <div>
           <Img style={{ marginRight: 5 }} />
         </div>
-        <div>
+        <div style={{ width: '100%' }}>
           <Typography.Title level={4}>{title}</Typography.Title>
           <Typography.Title level={5}>{descr}</Typography.Title>
           {percent && <Progress percent={percent} />}

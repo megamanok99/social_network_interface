@@ -22,6 +22,8 @@ import Auth from './pages/Auth';
 import ViewUserPage from './pages/ViewUserPage';
 import NewUserPage from './pages/NewUserPage';
 import NewViewUserPage from './pages/NewViewUserPage';
+import { ReactComponent as Karma } from './karma.svg';
+import KarmaPage from './pages/KarmaPage';
 const { Header, Sider, Content } = Layout;
 
 const App = () => {
@@ -36,10 +38,7 @@ const App = () => {
   return (
     <>
       {auth ? (
-        <Layout
-          style={{
-            height: '100vh',
-          }}>
+        <Layout style={{}}>
           <Sider
             trigger={null}
             collapsible
@@ -66,6 +65,7 @@ const App = () => {
                   label: 'Процедуры 44-ФЗ',
                   onClick: () => {
                     navigate('/table');
+                    setCollapsed(false);
                   },
                 },
                 {
@@ -74,6 +74,7 @@ const App = () => {
                   label: 'Реестр Запросов',
                   onClick: () => {
                     navigate('/table');
+                    setCollapsed(false);
                   },
                 },
                 {
@@ -82,6 +83,7 @@ const App = () => {
                   label: 'Контракты',
                   onClick: () => {
                     navigate('/table');
+                    setCollapsed(false);
                   },
                 },
                 {
@@ -90,6 +92,7 @@ const App = () => {
                   label: 'Календарь',
                   onClick: () => {
                     navigate('/calendar');
+                    setCollapsed(false);
                   },
                 },
                 {
@@ -98,14 +101,17 @@ const App = () => {
                   label: 'Личный кабинет',
                   onClick: () => {
                     navigate('/user');
+                    setCollapsed(false);
                   },
                 },
                 {
                   key: '1344',
                   icon: <UserOutlined />,
                   label: 'Просмотр профиля',
+
                   onClick: () => {
                     navigate('/ViewUserPage');
+                    setCollapsed(false);
                   },
                 },
                 {
@@ -114,6 +120,7 @@ const App = () => {
                   label: 'Личный кабинет new',
                   onClick: () => {
                     navigate('/NewUserPage');
+                    setCollapsed(false);
                   },
                 },
                 {
@@ -122,6 +129,7 @@ const App = () => {
                   label: 'Просмотр профиля new',
                   onClick: () => {
                     navigate('/NewViewUserPage');
+                    setCollapsed(false);
                   },
                 },
               ]}
@@ -134,6 +142,10 @@ const App = () => {
                 background: colorBgContainer,
               }}>
               <Space style={{ float: 'right' }}>
+                <Link to={'/karma'}>
+                  <Button shape={'circle'} size="large" icon={<Karma />} />
+                </Link>
+
                 <Link to={'/portfolio'}>
                   <Button shape={'circle'} size="large" icon={<SearchOutlined />} />
                 </Link>
@@ -171,6 +183,7 @@ const App = () => {
                 <Route path="/ViewUserPage" element={<ViewUserPage />} />
                 <Route path="/NewUserPage" element={<NewUserPage />} />
                 <Route path="/NewViewUserPage" element={<NewViewUserPage />} />
+                <Route path="/karma" element={<KarmaPage />} />
               </Routes>
             </Content>
           </Layout>

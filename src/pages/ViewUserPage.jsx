@@ -98,8 +98,8 @@ const ViewUserPage = () => {
         gutter={8}
         style={{
           width: 'inherit',
-          paddingRight: '10vw',
-          paddingLeft: '10vw',
+          marginRight: '10vw',
+          marginLeft: '10vw',
           background: 'inherit',
         }}
         justify="center">
