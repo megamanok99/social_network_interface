@@ -1,7 +1,7 @@
 import { DownCircleOutlined, MessageOutlined, UpCircleOutlined } from '@ant-design/icons';
 import { Avatar, Button, Card, Col, Row, Tag, Typography } from 'antd';
 import PostImg from '../../src/post.png';
-const Post = ({ Img, title, auth }) => {
+const Post = ({ Img, title, auth, noLike }) => {
   return (
     <Card>
       <Row>
@@ -28,7 +28,7 @@ const Post = ({ Img, title, auth }) => {
               <Typography.Text style={{ fontSize: 10 }}>дата публикации 07.04.2023</Typography.Text>
             </div>
             <div>
-              <Button type="link" icon={<DownCircleOutlined />} />
+              {!noLike && <Button type="link" icon={<DownCircleOutlined />} />}
               134
               <Button type="link" className="greenButton" icon={<UpCircleOutlined />} />
             </div>

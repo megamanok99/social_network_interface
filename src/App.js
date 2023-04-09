@@ -8,10 +8,13 @@ import {
   PoweroffOutlined,
   MessageOutlined,
   SearchOutlined,
+  TeamOutlined,
+  ExceptionOutlined,
+  UngroupOutlined,
 } from '@ant-design/icons';
-import { Avatar, Button, Grid, Layout, Menu, Space, theme } from 'antd';
+import { Avatar, Button, Grid, Layout, Menu, Modal, Space, theme } from 'antd';
 import React, { useState } from 'react';
-
+import Img from './ID.png';
 import { ReactComponent as YourSvg } from '../src/logo.svg';
 import { Route, Routes } from 'react-router';
 import { Link, useNavigate } from 'react-router-dom';
@@ -24,13 +27,25 @@ import NewUserPage from './pages/NewUserPage';
 import NewViewUserPage from './pages/NewViewUserPage';
 import { ReactComponent as Karma } from './karma.svg';
 import KarmaPage from './pages/KarmaPage';
+import ListOfPosts from './pages/ListOfPosts';
+import NewPost from './components/NewPost';
+import NewMessage from './components/NewMessage';
 const { Header, Sider, Content } = Layout;
 
 const App = () => {
   const [collapsed, setCollapsed] = useState(true);
   const [auth, setAuth] = useState(false);
   const navigate = useNavigate();
-
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const showModal = (bool) => {
+    setIsModalOpen(bool);
+  };
+  const handleOk = () => {
+    setIsModalOpen(false);
+  };
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
   const {
     token: { colorBgContainer },
   } = theme.useToken();
@@ -47,13 +62,28 @@ const App = () => {
             onClick={() => {
               setCollapsed(!collapsed);
             }}>
-            <div className="logo">
-              <YourSvg
-                onClick={() => {
-                  navigate('/');
-                }}
-              />
-            </div>
+            {collapsed && (
+              <div
+                style={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignContent: 'center',
+                  marginBottom: 10,
+                  marginTop: 10,
+                }}>
+                <img src={Img} alt="logo" width={'30px'} />
+              </div>
+            )}
+            {!collapsed && (
+              <div className="logo">
+                <YourSvg
+                  onClick={() => {
+                    navigate('/');
+                  }}
+                />
+              </div>
+            )}
+
             <Menu
               // theme="dark"
               mode="inline"
@@ -61,28 +91,37 @@ const App = () => {
               items={[
                 {
                   key: '2',
-                  icon: <VideoCameraOutlined />,
-                  label: 'Процедуры 44-ФЗ',
+                  icon: <TeamOutlined />,
+                  label: 'Сообщество',
                   onClick: () => {
-                    navigate('/table');
+                    navigate('/listOfPosts');
                     setCollapsed(false);
                   },
                 },
                 {
                   key: '3',
-                  icon: <UploadOutlined />,
-                  label: 'Реестр Запросов',
+                  icon: (
+                    <a
+                      target="_blank"
+                      href="https://www.roseltorg.ru/procedures/search"
+                      rel="noreferrer">
+                      <ExceptionOutlined />
+                    </a>
+                  ),
+                  label: 'Торги',
                   onClick: () => {
-                    navigate('/table');
                     setCollapsed(false);
                   },
                 },
                 {
                   key: '31',
-                  icon: <UploadOutlined />,
-                  label: 'Контракты',
+                  icon: (
+                    <a target="_blank" href="https://www.roseltorg.ru/speed" rel="noreferrer">
+                      <UngroupOutlined />
+                    </a>
+                  ),
+                  label: 'Сервисы',
                   onClick: () => {
-                    navigate('/table');
                     setCollapsed(false);
                   },
                 },
@@ -180,13 +219,25 @@ const App = () => {
                 <Route path="/user" element={<UserPage />} />
                 <Route path="/table" element={<h1>Какая-то таблица</h1>} />
                 <Route path="/calendar" element={<TaskCalendar />} />
-                <Route path="/ViewUserPage" element={<ViewUserPage />} />
+                <Route path="/ViewUserPage" element={<ViewUserPage showModal={showModal} />} />
                 <Route path="/NewUserPage" element={<NewUserPage />} />
-                <Route path="/NewViewUserPage" element={<NewViewUserPage />} />
+                <Route
+                  path="/NewViewUserPage"
+                  element={<NewViewUserPage showModal={showModal} />}
+                />
                 <Route path="/karma" element={<KarmaPage />} />
+                <Route path="/listOfPosts" element={<ListOfPosts />} />
               </Routes>
             </Content>
           </Layout>
+
+          <Modal
+            title="Написать сообщение"
+            open={isModalOpen}
+            onOk={handleOk}
+            onCancel={handleCancel}>
+            <NewMessage />
+          </Modal>
         </Layout>
       ) : (
         <Auth setAuth={setAuth} />

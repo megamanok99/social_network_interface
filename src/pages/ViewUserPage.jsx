@@ -1,5 +1,5 @@
-import { FireOutlined, StarOutlined, ThunderboltOutlined } from '@ant-design/icons';
-import { Avatar, Button, Card, Col, Row, Segmented, Space, Typography } from 'antd';
+import { FireOutlined, StarOutlined, ThunderboltOutlined, CheckOutlined } from '@ant-design/icons';
+import { Avatar, Button, Card, Col, Row, Segmented, Space, Typography, message } from 'antd';
 import { ReactComponent as Icon2 } from '../../src/01.svg';
 import { ReactComponent as Icon1 } from '../../src/02.svg';
 import AvatarImg from '../../src/avatar.png';
@@ -13,8 +13,12 @@ import NewPost from '../components/NewPost';
 import Post from '../components/Post';
 import UserCardInfo from '../components/UserCardInfo';
 import StatisticTrap from '../components/StatisticTrap';
+import { useState } from 'react';
 
-const ViewUserPage = () => {
+const ViewUserPage = ({ showModal }) => {
+  const [subscribe, setSubscribe] = useState(false);
+  const [karma, setKarma] = useState(6334);
+
   const data = [
     {
       title: 'Приближается срок заключения контракта',
@@ -87,8 +91,36 @@ const ViewUserPage = () => {
                 marginRight: '10vw',
               }}>
               <Space>
-                <Button type="primary">Написать</Button>
-                <Button type="primary">Подписаться</Button>
+                <Button
+                  type="primary"
+                  onClick={() => {
+                    showModal(true);
+                  }}>
+                  Написать
+                </Button>
+
+                {!subscribe ? (
+                  <Button
+                    type="primary"
+                    onClick={() => {
+                      setSubscribe(true);
+                      message.success('Карма выросла на 5!');
+                      setKarma(karma + 1);
+                    }}>
+                    Подписаться
+                  </Button>
+                ) : (
+                  <>
+                    <Button
+                      type="default"
+                      onClick={() => {
+                        setSubscribe(false);
+                      }}>
+                      Отписаться
+                    </Button>
+                    <CheckOutlined style={{ color: 'green' }} />
+                  </>
+                )}
               </Space>
             </div>
           </div>
@@ -106,7 +138,7 @@ const ViewUserPage = () => {
         <Col xs={24} sm={24} md={24} lg={12} xl={12}>
           <Row gutter={[16, 16]}>
             <Col span={24}>
-              <UserCardInfo carma="6334" dateRegistr="02.05.2015" happy={45} />
+              <UserCardInfo carma={karma} dateRegistr="02.05.2015" happy={45} />
             </Col>
             {/* 
             <Col span={24}>

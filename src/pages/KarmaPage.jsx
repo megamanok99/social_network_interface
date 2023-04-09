@@ -66,7 +66,7 @@ const KarmaPage = () => {
                   marginLeft: '18vw',
                 }}>
                 <Typography.Title level={3} style={{ fontSize: '18px', marginBottom: 0 }}>
-                  karma, Эммануил Гедеонович
+                  Эммануил Гедеонович
                 </Typography.Title>
                 <Typography.Text>0 подписчиков</Typography.Text>
               </div>
