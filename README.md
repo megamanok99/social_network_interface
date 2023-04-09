@@ -1,13 +1,16 @@
 # Интерфейс социальной сети  для РОСЭЛТОРГ в рамках хакатона `Разработка веб-сервиса с элементами геймификации для упрощения входа нового участника в закупки и подключении основных услуг` 
 <p align="center">
-  <img src="preview.png" alt="logo"/>
+   <img src="./src/readmePrev.png" alt="logo"/>
 </p>
-https://react-sneaker.herokuapp.com/
+
+<a href="https://main--precious-tarsier-056da5.netlify.app"> ссылка на демо</a>
+
 
 ## Используемые технологии  
-React.useState - для сохранения и изменения состояний   
-React.useEffect - для отсрисовки страницы при запросе данных с бэка  
-React.useContext- для пробрасывания пропсов  
-axios - для запроса данных с Mockapi  
-стилизация: Sass  
+React - фреймворк для создания SPA   
+Antd Design - UI-Kit 
+React-joyride- Анбординг приложения при первом входе 
+
+
+
 
